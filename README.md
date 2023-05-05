@@ -1,2 +1,2 @@
-# weather_api_rails
+# Weather API - Rails
 API de meteorologia feita em Rails.
