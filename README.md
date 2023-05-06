@@ -6,7 +6,7 @@ API simples com dados de meteorologia feita em Rails.
 ` git clone https://github.com/joaogdfaero/weather_api_rails.git`
 
 2. **Acesse a pasta do projeto**  
-` cd editora_livros_rails `
+` cd weather_api_rails `
 
 3. **Instale as gems necessárias**  
 ` bundle `
