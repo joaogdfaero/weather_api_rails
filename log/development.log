@@ -374,3 +374,18 @@ Processing by Api::V1::LocationsController#show as JSON
 Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.3ms | Allocations: 3467)
 
 
+Started GET "/api/v1/locations/1.html" for ::1 at 2023-05-06 14:09:53 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/locations_controller.rb:8:in `set_location'
+  Rendering api/v1/locations/show.json.jbuilder
+  [1m[36mRecording Load (0.1ms)[0m  [1m[34mSELECT "recordings".* FROM "recordings" WHERE "recordings"."location_id" = ? ORDER BY "recordings"."id" ASC LIMIT ?[0m  [["location_id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/v1/locations/show.json.jbuilder:5
+  [1m[36mCACHE Recording Load (0.0ms)[0m  [1m[34mSELECT "recordings".* FROM "recordings" WHERE "recordings"."location_id" = ? ORDER BY "recordings"."id" ASC LIMIT ?[0m  [["location_id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/v1/locations/show.json.jbuilder:6
+  Rendered api/v1/locations/show.json.jbuilder (Duration: 19.7ms | Allocations: 24748)
+Completed 200 OK in 42ms (Views: 21.8ms | ActiveRecord: 1.4ms | Allocations: 51449)
+
+
